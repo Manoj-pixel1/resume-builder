@@ -1,2 +1,161 @@
 # resume-builder
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Resume Builder (User Input)</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Oswald&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      background: #f4f6f9;
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+    header {
+      background: linear-gradient(to right, #283593, #5c6bc0);
+      color: white;
+      padding: 30px;
+      text-align: center;
+      font-family: 'Oswald', sans-serif;
+    }
+    .container {
+      max-width: 960px;
+      margin: 40px auto;
+      padding: 20px;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+    }
+    h2 {
+      font-family: 'Oswald', sans-serif;
+      margin-top: 40px;
+      border-bottom: 1px solid #ccc;
+      padding-bottom: 10px;
+      color: #3949ab;
+    }
+    .resume {
+      margin-top: 20px;
+      padding: 20px;
+      border: 1px dashed #aaa;
+      background: #fcfcfc;
+    }
+    .sidebar {
+      background: #3949ab;
+      color: white;
+      padding: 20px;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+    }
+    label {
+      font-weight: bold;
+      margin-top: 10px;
+      display: block;
+    }
+    input, textarea {
+      width: 100%;
+      padding: 8px;
+      margin-top: 4px;
+      margin-bottom: 12px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      font-size: 14px;
+      font-family: 'Roboto', sans-serif;
+    }
+  </style>
+</head>
+<body>
 
+<header>
+  <h1>Resume Builder AI</h1>
+  <p>Type your details below and see how it looks in different styles</p>
+</header>
+
+<div class="container">
+  <form>
+    <label>Full Name</label>
+    <input type="text" placeholder="Manoj Kumar">
+
+    <label>Email</label>
+    <input type="email" placeholder="manoj@example.com">
+
+    <label>Phone</label>
+    <input type="text" placeholder="+91 9876543210">
+
+    <label>Career Objective</label>
+    <textarea rows="3" placeholder="Brief summary about your career goal..."></textarea>
+
+    <label>Work Experience</label>
+    <textarea rows="4" placeholder="e.g. Backend Developer at TCS, 3 years..."></textarea>
+
+    <label>Education</label>
+    <textarea rows="3" placeholder="e.g. B.Tech in Computer Science, KIIT University"></textarea>
+
+    <label>Skills</label>
+    <input type="text" placeholder="Python, HTML, React, SQL">
+  </form>
+
+  <h2>Classic Layout</h2>
+  <div class="resume">
+    <h1 contenteditable="true">Manoj Kumar</h1>
+    <p contenteditable="true">Email: manoj@example.com | Phone: +91 9876543210</p>
+    <h3>Career Objective</h3>
+    <p contenteditable="true">Aspiring software developer passionate about scalable apps...</p>
+    <h3>Work Experience</h3>
+    <p contenteditable="true">Backend Developer at TCS, 2021–2024</p>
+    <h3>Education</h3>
+    <p contenteditable="true">B.Tech, KIIT University</p>
+    <h3>Skills</h3>
+    <p contenteditable="true">Python, HTML, React, SQL</p>
+  </div>
+
+  <h2>Modern Layout</h2>
+  <div class="resume grid">
+    <div class="sidebar" contenteditable="true">
+      <h2>Manoj Kumar</h2>
+      <p>Email:<br>manoj@example.com</p>
+      <p>Phone:<br>+91 9876543210</p>
+      <h3>Skills</h3>
+      <p>Python, HTML, React, SQL</p>
+    </div>
+    <div contenteditable="true">
+      <h3>Objective</h3>
+      <p>To work in a dynamic tech environment...</p>
+      <h3>Experience</h3>
+      <p>Backend Developer at TCS, 2021–2024</p>
+      <h3>Education</h3>
+      <p>B.Tech in Computer Science, KIIT University</p>
+    </div>
+  </div>
+
+  <h2>Creative Layout</h2>
+  <div class="resume grid">
+    <div contenteditable="true">
+      <h2>Manoj Kumar</h2>
+      <p>Email: manoj@example.com<br>Phone: +91 9876543210</p>
+      <h3>Objective</h3>
+      <p>Creating clean interfaces and intuitive user experiences...</p>
+      <h3>Skills</h3>
+      <ul>
+        <li>Python</li>
+        <li>HTML / CSS</li>
+        <li>React</li>
+        <li>SQL</li>
+      </ul>
+    </div>
+    <div contenteditable="true">
+      <h3>Work Experience</h3>
+      <p>Backend Developer at TCS (2021–2024)</p>
+      <p>Intern at Tech Mahindra (2020)</p>
+      <h3>Education</h3>
+      <p>B.Tech, KIIT University</p>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
